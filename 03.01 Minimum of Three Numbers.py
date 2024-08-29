@@ -1,0 +1,6 @@
+numone = int(input("Enter First Number: "))
+numtwo = int(input("Enter Second Number: "))
+numthr = int(input("Enter Third Number: "))
+if numone is <= numtwo or numthr print("numone")
+elif numtwo is <= numone or numthr print("numtwo")
+elif numthr is <= numone or numtwo print("numthr")
