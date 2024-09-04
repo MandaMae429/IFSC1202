@@ -1,10 +1,3 @@
-(input)("Enter a number: ")
-print("Last Digit:","{}".format() )
-
-number=5
-print("Enter a number:","{}".format(number))
-print("Last Digit:","{}".format(number % 10) )
-
-number=10
-print("Enter a number:","{}".format(number))
-print("Last Digit:","{}".format(number % 10) )
+num=(int(input("Enter a number:")))
+num0=num%10
+print ("Last Digit:","{}".format(num0))
