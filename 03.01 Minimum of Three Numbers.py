@@ -1,6 +1,11 @@
-numone = int(input("Enter First Number: "))
-numtwo = int(input("Enter Second Number: "))
-numthr = int(input("Enter Third Number: "))
-if numone is <= numtwo or numthr print("numone")
-elif numtwo is <= numone or numthr print("numtwo")
-elif numthr is <= numone or numtwo print("numthr")
+a = int(input("Enter First Number: "))
+b = int(input("Enter Second Number: "))
+c = int(input("Enter Third Number: "))
+if a < b and a < c:
+    print (a)
+elif b < a and b <c:
+    print(b)
+elif c < a and c < b:
+    print (c)
+else:    
+    print
