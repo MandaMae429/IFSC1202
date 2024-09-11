@@ -7,9 +7,9 @@ thr=(int(input("Enter Third Number: ")))
     #print (two)
 if one > two:
     one,two = two,one
-if one > thr:
+elif one > thr:
     one,thr = thr,one
-if two > thr:
+elif two > thr:
     two,thr = thr,two
     
 print (one, two, thr)
