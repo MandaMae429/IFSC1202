@@ -1,4 +1,6 @@
 n=(int(input("Enter N: ")))
-for i in range (n):
-    if n==0:
-        print (n)
+zeros=0
+for x in range(n):
+  if int(input("Enter Number:"))==0:
+    zeros+=1
+print(zeros)
