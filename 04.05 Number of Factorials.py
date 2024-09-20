@@ -1,6 +1,7 @@
-n=(int(input("Enter Number: ")))
-fact=1
-if n >= 1:
-    for x in range (1, n+1):
-        fact=fact+x
-        print (fact)
+n=int(input("Enter N:"))
+sum=0
+res=1
+for x in range(1,n+1):
+  res*=x
+  sum+=res
+print(sum)
