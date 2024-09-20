@@ -4,7 +4,7 @@ for y in range(2,(n//2)+1):
     if n%y==0:
       isprime=False
       continue
-    if isprime:
+if isprime:
         print("PRIME")
-    else:
+else:
         print("COMPOSITE")
