@@ -6,7 +6,7 @@ while n!='':
     count+=1
   prev=int(n)
   n=input("Enter a Number (CR to Quit)")
-  if count==0:
-    print("Sequence length is 0")
+if count==0:
+  print("Sequence length is 0")
 else:
-    print("Number of Values Greater than Previous",count)
+  print("Number of Values Greater than Previous",count)
