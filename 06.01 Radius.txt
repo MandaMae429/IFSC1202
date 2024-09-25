@@ -1,7 +1,4 @@
-import math
-def diameter(r):
-    return (r*2)
-def circumference(r):
-    return (r*math.pi*2)
-def area(r):
-    return (math.pi*r*r)
+1.6
+2.93
+200.99
+1048.732
