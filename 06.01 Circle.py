@@ -20,5 +20,6 @@ while x!='':
     circ=circumference(r)
     are=area(r)
     output=output+("{:>20n}{:>20n}{:>20n}{:>20n}\n".format(r,diam,circ,are))
-
+    radiustextfile.readline
+    break
     print (output)
