@@ -10,3 +10,15 @@ radiustextfile=open ("06.01 Radius.txt", "r")
 x=radiustextfile.readline()
 print (x)
 radiustextfile.close()
+
+output=("{:>20}{:>20}{:>20}{:>20}\n".format("Radius","Diameter","Circumference","Area"))
+while x!='':
+    trim=x.find('\n')
+
+    r=float(x)
+    diam=diameter(r)
+    circ=circumference(r)
+    are=area(r)
+    output=output+("{:>20n}{:>20n}{:>20n}{:>20n}\n".format(r,diam,circ,are))
+
+    print (output)
