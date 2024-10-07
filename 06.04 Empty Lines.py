@@ -1,17 +1,18 @@
 emptylinestext=open ("06.04 EmptyLinesInput.txt", "r")
+emptylineoutput=open("06.04 EmptyLinesOutput.txt", "w")
 count=0
 total=0
-x=emptylinestext.readline()
+line=emptylinestext.readline()
 while True:
-    line=x
+    #print(repr(line))
     if not line:
         break
-    elif time=='\n':
-        total=+1
-        continue
+    elif line==' \n':
+        total+=1
     else:
         total+=1
         count+=1
-        print (line.rstrip())
-    print("Total:{} Count:{}".format(total,count))
+        emptylineoutput.write("{}".format(line))
+    line=emptylinestext.readline()    
+print("{}Records Read\n{}Records Written".format(total,count))
 emptylinestext.close()
