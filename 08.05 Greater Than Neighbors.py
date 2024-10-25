@@ -10,5 +10,5 @@ for x in range(len(mylist)):
     if mylist[x] > mylist[y] and mylist[x]>mylist[z]:
         count=1
         continue
-
+#NOT FINISHED
 #The first and the last items of the list shouldn't be considered because they don't have two neighbors.
