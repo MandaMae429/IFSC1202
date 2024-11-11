@@ -1,12 +1,73 @@
-#Create a python solution that reads a table containing the distansces between cities. Prompt for a From City and a To City, search the table, and print the distance between the cities.
-#Logic
-#The input file, 09.Project Distances.csv, is a conmma separated value file, with the From City in the zeroth colunmn and the To City in the zeroth row.
-#Read the input file and load each line into a row of a two dimensional list.
-#Print the two dimensional list
-#Prompt for a From City
-#Prompt for a To City
-#Search the zeroth column for the From City. Save the index of the row where the city was found.
-#Search the zeroth row for the To City. Save the index of the column where the city was found.
-#If the From City was not found, then display "Invalid From City".
-#If the To City was not found, then display "Invalid To City".
-#If both cities where found, display the From City, To City, and the Distance.
+def cityfix(city):
+  city=city.lower()
+  city=city.capitalize()
+  return city
+
+def citycheck(city,list):
+  if city in list:
+    return True
+  else:
+    return False
+def distance(city1,city2,table):
+  x=table[0].index(city1)
+  #print(x)
+  y=table[0].index(city2)
+  #print(y)
+  #print(table[x][y])
+  return table[x][y]
+#open file and create lists
+citytable=open("09.Project Distances.csv")
+line = citytable.readline()
+#print(line)
+table=[]
+while True:
+  if not line:
+    break
+  temp=line.strip()
+  #print(temp)
+  table.append(temp.split(","))
+  line=citytable.readline()
+citytable.close()
+y=0
+for x in range(len(table)):
+  for y in range(len(table[x])):
+    print("{:10}".format(table[x][y]),end="")
+  print()
+
+citylist=[]
+for x in range(1,len(table[0])):
+  citylist.append(table[0][x])
+#print(citylist)
+#print(table)
+x=0
+while True:
+  fromc=input("Enter From City: ")
+  fromc=cityfix(fromc)
+  leave=False
+  for x in range(1,len(table[0])):
+    if fromc==table[0][x]:
+      leave=True
+      print(x)
+      break
+  if leave:
+    break
+  else:
+    print("Invalid From City")
+y=0
+while True:
+  toc=input("Enter To City: ")
+  toc=cityfix(toc)
+  leave=False
+  for y in range(1,len(table[0])):
+    if toc==table[y][0]:
+      leave=True
+      print(x)
+      break
+  if leave:
+    break
+  else:
+    print("Invalid To City")
+
+print("{} to {} - {} miles".format(fromc,toc,table[y][x]))
+
+

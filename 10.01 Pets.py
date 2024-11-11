@@ -10,7 +10,7 @@ class Pets ():
         self.Age=age
 #Read the 10.01 Pets.txt file, create three pet objects, one for each line, and print the object attributes for the pets using the .format 
 file=open("10.01 Pets.txt", "r")
-file.readline()
-
 print (file.readline())
+
+#print (file.readline())
 #Print the Name, Type, and Age attributes from each of the pet objects
